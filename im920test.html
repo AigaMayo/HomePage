@@ -176,6 +176,24 @@
             IM920Serial.print("TXDU 0002 123456\r\n");<br>
             delay(1000);<br>
         }<br></pre>
+        <h0>FMプログラム</h0>
+        <h1>プログラム</h1>
+        <pre>
+        #include ＜SoftwareSerial.h＞<br>
+            <br>
+        SoftwareSerial IM920Serial(11,10); // RX, TX<br>
+            <br>
+        void setup() {<br>
+            IM920Serial.begin(19200);<br>
+             <br>
+            pinMode(8,OUTPUT);//busy<br>
+            digitalWrite(8, HIGH);<br>
+        }<br>
+            <br>
+        void loop() {<br>
+            IM920Serial.print("TXDU 0002 123456\r\n");<br>
+            delay(1000);<br>
+        }<br></pre>
     </body>
 
 </html>
